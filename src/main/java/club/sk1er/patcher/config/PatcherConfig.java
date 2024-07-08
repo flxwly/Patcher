@@ -486,6 +486,13 @@ public class PatcherConfig extends Vigilant {
     public static boolean futureHitBoxes = true;
 
     @Property(
+        type = PropertyType.SWITCH, name = "1.14 Cactus Selection Boxes",
+        description = "Replaces the selection box for Cactus with the 1.14 variant.\n§eOnly works on Hypixel & Singleplayer.",
+        category = "Miscellaneous", subcategory = "Blocks"
+    )
+    public static boolean futureCactusHitBoxes  = false;
+    
+    @Property(
         type = PropertyType.SWITCH, name = "Alternate Text Shadow",
         description = "Change the text-shadow to only move down rather than move to the side.",
         category = "Miscellaneous", subcategory = "Rendering"
