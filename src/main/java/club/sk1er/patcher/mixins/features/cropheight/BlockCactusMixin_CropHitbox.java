@@ -21,14 +21,14 @@ public class BlockCactusMixin_CropHitbox extends BlockMixin_CropHitbox {
     @Inject(method = "getSelectedBoundingBox", at = @At("HEAD"))
     public void patcher$getSelectedBoundingBox(World worldIn, BlockPos pos, CallbackInfoReturnable<AxisAlignedBB> cir) {
         if (PatcherConfig.futureCactusHitBoxes && (EssentialAPI.getMinecraftUtil().isHypixel() || UMinecraft.getMinecraft().isIntegratedServerRunning())) {
-            CropUtilities.updateCactusBox(worldIn.getBlockState(pos).getBlock());
+            //CropUtilities.updateCactusBox(worldIn.getBlockState(pos).getBlock());
         }
     }
 
     @Override
     public void collisionRayTrace(World worldIn, BlockPos pos, Vec3 start, Vec3 end, CallbackInfoReturnable<MovingObjectPosition> cir) {
         if (PatcherConfig.futureCactusHitBoxes && (EssentialAPI.getMinecraftUtil().isHypixel() || UMinecraft.getMinecraft().isIntegratedServerRunning())) {
-            CropUtilities.updateCactusBox(worldIn.getBlockState(pos).getBlock());
+            //CropUtilities.updateCactusBox(worldIn.getBlockState(pos).getBlock());
         }
     }
     //#endif
